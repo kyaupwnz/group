@@ -24,12 +24,13 @@ class Liquid:
     id: int  # номер жижи, реализовать автоинкремент
     title: str  # название
     density: float  # плотность
-    id = 0
+    ID = 0
 
     def __init__(self, title, density):
         self.title = title
         self.density = density
-        self.id += 1
+        Liquid.ID += 1
+        self.id = Liquid.ID
 
     def __str__(self):
         """
